@@ -1,20 +1,17 @@
 //Javascript block
-let a = 1;
-{
+let a = 1; {
     let a = 2;
 }
 console.log(a += " This is from let");
 
-var b = 1;
-{
+var b = 1; {
     var b = 3;
     b += " this is from var"
 }
 console.log(b);
 
 
-const c = 1; 
-{
+const c = 1; {
     const c = 2;
 }
 console.log(c);
@@ -51,15 +48,18 @@ switch (Animal) {
 
 //javascript for
 // melakukakn iterasi kurang dari 5, yaitu 0,1,2,3,4
-var text = "";
-for (i = 0; i < 5; i++) {
-    text += i + ",";
-    console.log(text);   
+function fordata() {
+    var text = "";
+    for (i = 0; i < 5; i++) {
+        text += "This is number " + i + "<br>";
+    }
+    document.getElementById("forData").innerHTML = text;
 }
+
 
 // javascript for in
 // dapat melihat data dalam array
-function fullName(){
+function fullName() {
     var person = {
         fName: "Indra",
         lName: "Putra",
@@ -85,3 +85,13 @@ function wdata() {
     document.getElementById("wData").innerHTML = numb;
 }
 
+// javascript do while
+function dwdata() {
+    var text = "";
+    var i = 0;
+    do {
+        text += "The number is " + i + "<br>";
+        i++;
+    } while (i < 5);
+    document.getElementById("dwData").innerHTML = text;
+}
