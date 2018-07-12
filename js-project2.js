@@ -19,24 +19,28 @@ const guests2 = [
     "Mr. Jamale"
 ];
 
-const listpeople = (array) => {
+const allguest = guests1.concat(guests2);
+
+//----
+
+const listPeople = (array) => {
     array.forEach(name => {
         console.log(name);
     });
 }
 // level 01
-const mister = (array = "Not Our Guest") => {
+const filterMister = (array = "Not Our Guest") => {
     const filtered = array.filter(item => item.charAt(2) !== "s");
     console.log(filtered);
 };
 
-const mistress = (array) => {
+const filterMistress = (array) => {
     const filtered = array.filter(item => item.charAt(2) === "s");
     console.log(filtered);
 };
 
 // level 02
-const defineSex = (array) => {
+const tagGender = (array) => {
     array.forEach(item => {
         if (item.charAt(2) !== "s") {
             console.log(`${item} (male)`);
@@ -47,9 +51,9 @@ const defineSex = (array) => {
 };
 
 // level 3 & 4
-const search = (name) => {
-    const allguest = guests1.concat(guests2);
-    const searching = allguest.filter(item =>
+const searchNameInData = (data, name) => {
+    data.push("Mr. Haidar")
+    const searching = data.filter(item =>
         item.toLowerCase().includes(name.toLowerCase())
     );
     console.log(searching);
@@ -81,11 +85,16 @@ const member = [
 // });
 // }
 
-const memberlist = (members) => {
+const filterMemberList = (members) => {
     members.forEach(item => {
         // console.log(typeof item == "string");
         if (typeof item == "string") {
             console.log(item)
         }
     });
+}
+
+const filterMember = (members) => {
+    const filtered = members.filter(item => typeof item === "string");
+    console.log(filtered);
 }
