@@ -95,3 +95,19 @@ function dwdata() {
     } while (i < 5);
     document.getElementById("dwData").innerHTML = text;
 }
+
+function filterdata() {
+    const words = [
+        "spray",
+        "limit",
+        "elite",
+        "exuberant",
+        "destruction",
+        "present",
+        "happy"
+    ];
+    let longWords = words.filter(word => word.length > 6);
+    let shortWords = words.filter(word => word.length < 6);
+    document.getElementById("filterLong").innerHTML = longWords;
+    document.getElementById("filterShort").innerHTML = shortWords;
+}
